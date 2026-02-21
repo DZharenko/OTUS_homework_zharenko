@@ -5,16 +5,16 @@
     В конце программа должна вывести сумму всех введённых чисел.'''
 
 
-# counter = 0
+counter = 0
 
-# while True:
-#     user_input = input('Введите число (для завершения введите, что-то отличное от числа)\n>>> ')
-#     if user_input.lstrip('-').replace('.','1').isdigit():
-#         number = float(user_input)
-#         counter += number
-#     else:
-#         break
-# print('Сумма введенных чисел = ', counter)
+while True:
+    user_input = input('Введите число (для завершения введите, что-то отличное от числа)\n>>> ')
+    if user_input.lstrip('-').replace('.','1').isdigit():
+        number = float(user_input)
+        counter += number
+    else:
+        break
+print('Сумма введенных чисел = ', counter)
 
 
 '''
@@ -23,15 +23,15 @@
     Программа должна создать новую строку, содержащую только те буквы из исходной строки,
     которые были в верхнем регистре.'''
 
-# user_input = input('Введите строку с большими и маленькими буквам (Программа выведет только большие буквы)\n>>> ')
+user_input = input('Введите строку с большими и маленькими буквам (Программа выведет только большие буквы)\n>>> ')
 
-# result_string = ''
+result_string = ''
 
-# for char in user_input:
-#     if char.isupper() is True:
-#         result_string += char
+for char in user_input:
+    if char.isupper() is True:
+        result_string += char
 
-# print('Получилась строка с большими символами: ', result_string)
+print('Получилась строка с большими символами: ', result_string)
 
 
 '''
@@ -46,15 +46,15 @@
 Если кратно и 3, и 5 — FizzBuzz.'''
 
 
-# for elem in range(101):
-#     if elem % 3 == 0 and elem % 5 == 0:
-#         print('FizzBuzz')
-#     elif elem % 3 == 0:
-#         print('Fizz')
-#     elif elem % 5 == 0:
-#         print('Buzz')
-#     else:
-#         print(elem)
+for elem in range(101):
+    if elem % 3 == 0 and elem % 5 == 0:
+        print('FizzBuzz')
+    elif elem % 3 == 0:
+        print('Fizz')
+    elif elem % 5 == 0:
+        print('Buzz')
+    else:
+        print(elem)
 
 '''
 Задание №4
@@ -71,6 +71,26 @@ for elem in user_input:
         summa += int(elem)
 
 print('Сумма цифр в строке - ', summa)
+
+
+
+'''
+Задание №5
+Пользователь вводит через консоль 10 чисел. Программа должна определить максимальное число и вывести его в консоль.
+'''
+counter = 1
+summa = 0
+
+for _ in range(10):
+    user_input = input(f'Введите число №{counter} (Программа посчитает сумма всех 10 введенных чисел)\n>>> ')
+    if user_input.lstrip('-').replace('.','1').isdigit():
+        summa += float(user_input)
+        counter += 1
+    else:
+        print('Вы ввели не число. Вывод финального результата')
+        break
+print(f'Сумма введенных чисел = {summa}')
+        
 
 
 
