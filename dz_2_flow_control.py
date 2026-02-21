@@ -34,7 +34,32 @@ for char in user_input:
 print('Получилась строка с большими символами: ', result_string)
 
 
+'''
+Задание №3
 
+Классическая игра FizzBuzz. Программа в цикле выводит в консоль числа от 1 до 100.
+4
+Если число кратно 3, вместо него выводится Fizz.
+
+Если кратно 5 — Buzz.
+
+Если кратно и 3, и 5 — FizzBuzz.'''
+
+
+for elem in range(101):
+    if elem % 3 == 0 and elem % 5 == 0:
+        print('FizzBuzz')
+    elif elem % 3 == 0:
+        print('Fizz')
+    elif elem % 5 == 0:
+        print('Buzz')
+    else:
+        print(elem)
+
+
+
+
+        
 
 
 
