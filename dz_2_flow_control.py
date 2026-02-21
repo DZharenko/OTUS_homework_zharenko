@@ -5,16 +5,16 @@
     В конце программа должна вывести сумму всех введённых чисел.'''
 
 
-counter = 0
+# counter = 0
 
-while True:
-    user_input = input('Введите число (для завершения введите, что-то отличное от числа)\n>>> ')
-    if user_input.lstrip('-').replace('.','1').isdigit():
-        number = float(user_input)
-        counter += number
-    else:
-        break
-print('Сумма введенных чисел = ', counter)
+# while True:
+#     user_input = input('Введите число (для завершения введите, что-то отличное от числа)\n>>> ')
+#     if user_input.lstrip('-').replace('.','1').isdigit():
+#         number = float(user_input)
+#         counter += number
+#     else:
+#         break
+# print('Сумма введенных чисел = ', counter)
 
 
 '''
@@ -23,15 +23,15 @@ print('Сумма введенных чисел = ', counter)
     Программа должна создать новую строку, содержащую только те буквы из исходной строки,
     которые были в верхнем регистре.'''
 
-user_input = input('Введите строку с большими и маленькими буквам (Программа выведет только большие буквы)\n>>> ')
+# user_input = input('Введите строку с большими и маленькими буквам (Программа выведет только большие буквы)\n>>> ')
 
-result_string = ''
+# result_string = ''
 
-for char in user_input:
-    if char.isupper() is True:
-        result_string += char
+# for char in user_input:
+#     if char.isupper() is True:
+#         result_string += char
 
-print('Получилась строка с большими символами: ', result_string)
+# print('Получилась строка с большими символами: ', result_string)
 
 
 '''
@@ -46,20 +46,32 @@ print('Получилась строка с большими символами:
 Если кратно и 3, и 5 — FizzBuzz.'''
 
 
-for elem in range(101):
-    if elem % 3 == 0 and elem % 5 == 0:
-        print('FizzBuzz')
-    elif elem % 3 == 0:
-        print('Fizz')
-    elif elem % 5 == 0:
-        print('Buzz')
-    else:
-        print(elem)
+# for elem in range(101):
+#     if elem % 3 == 0 and elem % 5 == 0:
+#         print('FizzBuzz')
+#     elif elem % 3 == 0:
+#         print('Fizz')
+#     elif elem % 5 == 0:
+#         print('Buzz')
+#     else:
+#         print(elem)
 
+'''
+Задание №4
+Пользователь вводит строку, содержащую любые символы (буквы, цифры и специальные символы). 
+Программа должна вычислить и вывести сумму всех цифр, присутствующих в этой строке.
+'''
 
+user_input = input('Введите строку с цифрами, буквами и спецсимволами (Программа посчитает сумма всех цифр)\n>>> ')
 
+summa = 0
 
-        
+for elem in user_input:
+    if elem.isdigit():
+        summa += int(elem)
+
+print('Сумма цифр в строке - ', summa)
+
 
 
 
