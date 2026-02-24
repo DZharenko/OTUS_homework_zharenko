@@ -85,8 +85,8 @@ for _ in range(10):
     user_input = input(f'Введите число №{counter} (Программа выведет максимально число из всех 10 введенных чисел)\n>>> ')
     if user_input.lstrip('-').replace('.','1').isdigit():
         if float(user_input) > max_num:
-            max_num = float(user_input)    
-        counter += 1
+            max_num = float(user_input)
+            counter += 1
     else:
         print('Вы ввели не число. Вывод финального результата')
         break
