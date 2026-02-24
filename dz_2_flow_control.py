@@ -79,14 +79,15 @@ print('Сумма цифр в строке - ', summa)
 Пользователь вводит через консоль 10 чисел. Программа должна определить максимальное число и вывести его в консоль.
 '''
 counter = 1
-summa = 0
+max_num = 0
 
 for _ in range(10):
-    user_input = input(f'Введите число №{counter} (Программа посчитает сумма всех 10 введенных чисел)\n>>> ')
+    user_input = input(f'Введите число №{counter} (Программа выведет максимально число из всех 10 введенных чисел)\n>>> ')
     if user_input.lstrip('-').replace('.','1').isdigit():
-        summa += float(user_input)
+        if float(user_input) > max_num:
+            max_num = float(user_input)    
         counter += 1
     else:
         print('Вы ввели не число. Вывод финального результата')
         break
-print(f'Сумма введенных чисел = {summa}')
+print(f'Максимальное введенное число = {max_num}')
