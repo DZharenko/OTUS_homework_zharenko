@@ -34,11 +34,42 @@ def check_integer():
         else:
             print('Введенное значение не является целым числом, повторите попытку')
 
+'''
+Написать функцию, которая создаёт абсолютный путь к файлу.
+
+Позиционные аргументы:
+
+название диска,
+
+неограниченное количество папок,
+
+имя файла (без расширения).
 
 
+Ключевые аргументы:
+ext — расширение файла,
 
+sep — разделитель (по умолчанию '/').
 
+'''
+# Решение через конкатенацию
+def create_full_path_to_file(*args, ext='xlsx', sep='/'):
+    full_path = ''
+    for elem in args:
+        full_path += f'{elem}{sep}'
 
+    full_path_w_ext = f'{full_path[:-1]}.{ext}'
+    print (f' Полный путь - {full_path_w_ext}')
+    return full_path_w_ext
 
+create_full_path_to_file('c','work', 'funx')
 
+# Решение через join
+def create_full_path_to_file(*args, ext='xlsx', sep='/'):
+    full_path = sep.join(args)
+    result = f' Полный путь - {full_path}.{ext}'
+    print(result)
+    return result
+
+create_full_path_to_file('c','work', 'funx')
 
