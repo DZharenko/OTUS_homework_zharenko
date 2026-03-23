@@ -71,5 +71,18 @@ def create_full_path_to_file(*args, ext='xlsx', sep='/'):
     print(result)
     return result
 
-create_full_path_to_file('c','work', 'funx')
+'''
+Написать функцию, которая принимает список, состоящий из объектов разных типов, и возвращает словарь, где:
+ключи — типы данных объектов;
+значения — списки объектов соответствующего типа.
+'''
+
+def list_to_dict(data):
+    dict_from_list = {}
+    for elem in data:
+        key = type(elem)
+        dict_from_list.setdefault(key, [])
+        dict_from_list[key].append(elem)
+    return dict_from_list
+
 
